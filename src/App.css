@@ -1,41 +1,127 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  max-width: 1100px;  
+  margin: 0 auto;    
+  width: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #dedede;
+  color: #000000;
+}
+
+
+nav {
+  background-color: #30505B;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.page-title {
+  font-size: 2.2rem;
+  color: #30505B;
+  margin-bottom: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.book-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
 }
 
-.card {
-  padding: 2em;
+.book-card:hover {
+  transform: scale(1.04);
 }
 
-.read-the-docs {
-  color: #888;
+.book-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.book-title {
+  margin-top: 0.75rem;
+  font-weight: bold;
+}
+
+.book-detail-img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+ul {
+  padding-left: 0;
+  text-align: center;
+  list-style-position: inside;
+}
+
+li {
+  line-height: 2;
+  margin-bottom: 0.8rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #30505B;
+}
+
+.error-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: red;
+}
+
+.quote-book {
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #555;
+  margin-left: 0.5rem;
 }
